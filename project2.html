@@ -8,8 +8,12 @@
         body{
             position: relative;
         }
+        .main{
+            position: relative;
+        }
         #simg{
-           position: sticky;
+           position:fixed;
+           z-index: 1;
           
         }
         nav{
@@ -20,7 +24,15 @@
             text-align:center ;
             padding: 0px  0px 40px;
             margin: 0 auto;
+            
 
+        }
+        .line_img{
+          border: 0.5px solid ;
+            background-image: linner-gradient ( rgb(224, 116, 48), rgb(223, 78, 121)  );
+        }
+        #nav_bar{
+            position: relative;
         }
        /* .first_part{
             background-color: rgb(160, 155, 155);
@@ -40,30 +52,41 @@
 </head>
 <body>
     <header>
-        <section>
-            <article  id="simg">
+        <section class="main">
+            <article id="simg" >
                 <img src="./simg.png" alt="simg" width="100%" >
             </article>
+           
            
         </section>
 
     </header>
     <main>
         <section>
+            <article id="nav_bar">
+                <nav>
+                   <img  src="./IMG2.png"  alt="img2"  height="70px" width="100px">
+                   <a href="/html/" style="color: black;text-decoration: none;margin: 50px;">HOME</a> 
+                   <a href="/css/"  style="color: black; text-decoration: none;margin: 50px;">ABOUT</a> 
+                   <a href="/js/"  style="color: black; text-decoration: none;margin: 50px;">SPEAKERS</a> 
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">SCHEDULE</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">BLOG</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">CONTACTS</a>
+                   <button style="margin: 40px;background-color: rgb(227, 92, 115);border-radius: 20px;height: 40px;width: 100px;">Tickets</button>
+                </nav>
+   
+               </article>
+           
             <article>
-             <nav>
-                <img  src="./IMG2.png"  alt="img2"  height="70px" >
-                <a href="/html/" style="color: black;text-decoration: none;margin: 50px;">HOME</a> 
-                <a href="/css/"  style="color: black; text-decoration: none;margin: 50px;">ABOUT</a> 
-                <a href="/js/"  style="color: black; text-decoration: none;margin: 50px;">SPEAKERS</a> 
-                <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">SCHEDULE</a>
-                <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">BLOG</a>
-                <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">CONTACTS</a>
-                <button style="margin: 40px;background-image: repeating-linear-gradient(orang,yellow 10% ,rgb(227, 92, 115));border-radius: 20px;height: 40px;width: 100px;">Tickets</button>
-             </nav>
-
-                
+                <img src="./fimg.png" alt="fimg" width=100%>
             </article>
+            <div class="line_img">
+                <p>Conference Date </p>
+                <h1>Count Every Second <br>Until the Event</h1>
+                <select>
+                    <option value="Date">5 day</option>
+                </select>
+            </div>
         </section>
 
     </main>
