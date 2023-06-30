@@ -4,54 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/0edb311df1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Pacifico&family=Pathway+Gothic+One&family=Patrick+Hand&family=Work+Sans:wght@100&family=Yellowtail&display=swap" rel="stylesheet">
     <style>
         body{
-            position: relative;
+            /* position: relative; */
         }
         .main{
-            position: relative;
+          
         }
         #simg{
            position:fixed;
-           z-index: 1;
+           /* z-index: 1; */
           
         }
         nav{
             background-color: rgb(83, 80, 80);
-            position:relative;
-            width:95%;
-            height: 70px;
-            text-align:center ;
-            padding: 0px  0px 40px;
+            /* position:relative; */
+            width:80%;
+            height: 100px;
+            text-align:end ;
+            padding: 0px  40px 40px 0px;
             margin: 0 auto;
             
 
         }
-        .line_img{
-          border: 0.5px solid ;
-            background-image: linner-gradient ( rgb(224, 116, 48), rgb(223, 78, 121)  );
+        .under_img{
+            display: flex;
+            background-image: repeating-linear-gradient(orange,pink);
         }
-        #nav_bar{
-            position: relative;
+        #line_img{
+            width: 50%;
+          padding-left: 100px;
+            background-image: linner-gradient( rgb(224, 116, 48), rgb(223, 78, 121)  );
         }
-       /* .first_part{
-            background-color: rgb(160, 155, 155);
-            display: ;
-            position:;
-            margin-top: ;
-            text-align: center;
-            align-content: space-around;
+       
+        #demo{
+          
+            font-size:90px;
+            text-align: 0right;
+          
+           
         }
-        .ul_top{
-            display:inline-flex;
-            text-align:center;
-        } */
+        .img_dis{
+            display: flex;
+            margin: 0 auto;
+            padding-top:  70px;
+            width: 70%;
+        }
+        #dis1{
+            padding-left: 40px;
+            font-size: 22px;
 
+        }
+        .team_member_section{
+           
+            margin: 0 auto;
+           
+        }
+        .team_title{
+            text-align: center;
+        }
+        .team_member{
+            display: grid;
+            grid-template-columns:auto auto auto auto  auto;
+            grid-template-rows: auto auto;
+        }
+        .overlay {
+            position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .2s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+        }
+        .container:hover .overlay{
+            opacity: 1;
+        }
+
+
+      
 
     </style>
 </head>
 <body>
     <header>
+        
+
+    </header>
+    <main>
         <section class="main">
             <article id="simg" >
                 <img src="./simg.png" alt="simg" width="100%" >
@@ -59,19 +106,16 @@
            
            
         </section>
-
-    </header>
-    <main>
         <section>
             <article id="nav_bar">
                 <nav>
                    <img  src="./IMG2.png"  alt="img2"  height="70px" width="100px">
-                   <a href="/html/" style="color: black;text-decoration: none;margin: 50px;">HOME</a> 
-                   <a href="/css/"  style="color: black; text-decoration: none;margin: 50px;">ABOUT</a> 
-                   <a href="/js/"  style="color: black; text-decoration: none;margin: 50px;">SPEAKERS</a> 
-                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">SCHEDULE</a>
-                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">BLOG</a>
-                   <a href="/python/"  style="color: black; text-decoration: none;margin: 50px;">CONTACTS</a>
+                   <a href="/html/" style="color: black;text-decoration: none;margin: 30px;">HOME</a> 
+                   <a href="/css/"  style="color: black; text-decoration: none;margin: 30px;">ABOUT</a> 
+                   <a href="/js/"  style="color: black; text-decoration: none;margin: 30px;">SPEAKERS</a> 
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">SCHEDULE</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">BLOG</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">CONTACTS</a>
                    <button style="margin: 40px;background-color: rgb(227, 92, 115);border-radius: 20px;height: 40px;width: 100px;">Tickets</button>
                 </nav>
    
@@ -80,12 +124,152 @@
             <article>
                 <img src="./fimg.png" alt="fimg" width=100%>
             </article>
-            <div class="line_img">
+        </section>
+        <section class="under_img">
+            <div id="line_img">
                 <p>Conference Date </p>
                 <h1>Count Every Second <br>Until the Event</h1>
-                <select>
-                    <option value="Date">5 day</option>
-                </select>
+                </div>
+            <div  id="counter">
+                <span id="demo"></span>
+
+                <script>
+                
+                var countDownDate = new Date("jul 20, 2023 15:37:25").getTime();
+                
+               
+                var x = setInterval(function() {
+                
+                 
+                  var now = new Date().getTime();
+                    
+                
+                  var distance = countDownDate - now;
+                    
+                 
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                 
+                  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                    
+                
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+                </script>
+            </div>
+        </section>
+        <section>
+            <article class="img_dis">
+                <img src="./m0.png" alt="img0" width="50%" >
+                <div id="dis1">
+                    <h2> About Conference </h2>
+                    <p style="color: rgb(141, 139, 139);font-family: 'Work Sans', sans-serif;font-size: 20px;font-weight: 600;line-height: 28px;"> When I first got into the online advertising business, I was looking for the magical combination that would put my website into the top search engine rankings, catapult me to the forefront of the minds or individuals looking to buy my product, and generally make me rich beyond my wildest dreams! After succeeding in the business for this long, I’m able to look back on my old self with this kind of thinking and shake my head.
+                        <ul style="color: rgb(141, 139, 139);font-family: 'Work Sans', sans-serif;font-size: 20px;font-weight: 600;line-height: 28px;">
+                            <li>
+                                Write On Your Business Card
+                            </li>
+                            <li>
+                                Advertising Outdoors
+                            </li>
+                            <li>
+                                Effective Advertising Pointers
+                            </li>
+                            <li>
+                                Kook 2 Directory Add Url Free
+                            </li>
+                        </ul>
+                        <a href="https://preview.colorlib.com/#manup" style="font-size: 20px;color: black;font-weight: 600;">Discover Now</a>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="team_member_section">
+            
+              
+            <div class="team_title">
+                <h3>Who's Speaking</h3>
+                <p>These are our communicators, you can see each person information</p>
+            </div>
+            <div class="team_member">
+                <div class="container">
+                <img  src="./m1.jpg"  alt="member1" width="300px" height="500px" >
+                <div class="overlay"> Emma Sandoval
+                </div>
+               </div>
+           
+                <img src="./m2.jpg" alt="member2" width="300px" height="500px">
+                <img src="./m3.jpg" alt="member3" width="300px" height="500px">
+                <img src="./m4.jpg" alt="member4" width="300px" height="500px">
+                <img src="./m5.jpg" alt="member5" width="300px" height="500px">
+                <img src="./m6.jpg" alt="member6" width="300px" height="500px">
+                <img src="./m7.jpg" alt="member7" width="300px" height="500px">
+                <img src="./m8.jpg" alt="member8" width="300px" height="500px">
+                <img src="./m9.jpg" alt="member9" width="300px" height="500px">
+                <img src="./m10.jpg" alt="member10" width="300px" height="500px">
+
+            </div>
+        </section>
+        <section  class="schedule_section">
+            <h3>Our Schedule</h3>
+            <p>Do not miss anything topic about the event  </p>
+            <ul  class="nav nav_tabs">
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="false"><h5>Day 1</h5><p> May 04 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false"><h5>Day 2</h5><p> May 05 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false"><h5>Day 3</h5><p> May 06 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-4" role="tab" aria-selected="false"><h5>Day 4</h5><p> May 07 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-5" role="tab" aria-selected="false"><h5>Day 5</h5><p> May 08 , 2019</p></a></li>
+            </ul>
+            <div class="tab_content">
+                <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                    <div class="st-content">
+                        <div class="container">
+                            <div class="row">
+                                <div >
+                                    <div>
+                                        <img src="./schedule-1.jpg" alt="schedule-img">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h4>Dealig with Difficult People</h4>
+                                        <ul>
+                                            <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                            </li>
+                                            <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="st-content">
+                        <div  class="container">
+                            <div   >
+                                <div >
+                                    <img src="./schedule-2.jpg" alt="schedule-2">
+                                </div>
+                            </div>
+                            <div  >
+                                <div>
+                                    <h4>V7 Digital Photo Printing</h4>
+                                    <ul>
+                                        <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                        </li>
+                                        <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
