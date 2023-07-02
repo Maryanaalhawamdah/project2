@@ -108,13 +108,16 @@
             margin-top: 20px;
           margin-left: 25%;
           margin-right: 25%;
+          column-gap: 30px;
+          padding: 10px;
           
             
         }
         .nav_item{
-            border:1px solid black ;
+             border:1px solid black ; 
             display: flex;
             flex-direction: column;
+            column-gap: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
             text-align: center;
@@ -156,8 +159,20 @@
         .price-con{
             text-align: center;
         }
+        #counter{
+            border: 1px solid black;
+            font-size: 25px;
+            
+        }
+        #demo{
+           
+            font-size: 30px;
+        }
 
-
+        @media screen and (max-width: 800px) {
+      .left, .main, .right {
+         width: 100%;   }
+          }
 
       
 
@@ -309,7 +324,7 @@
                                 <div>
                                     <div>
                                         <h4>Dealig with Difficult People</h4>
-                                        <ul>
+                                        <ul style="list-style-type: none;"  >
                                             <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
                                             </li>
                                             <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
@@ -329,7 +344,7 @@
                             <div  >
                                 <div>
                                     <h4>V7 Digital Photo Printing</h4>
-                                    <ul>
+                                    <ul  style="list-style-type: none;">
                                         <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
                                         </li>
                                         <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
@@ -337,7 +352,7 @@
                                 </div>
                             </div>
                             <div>
-                                <ul>
+                                <ul  style="list-style-type: none;">
                                     <li>
                                         <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
                                     </li>
@@ -358,7 +373,7 @@
                         <div  >
                             <div>
                                 <h4>V7 Digital Photo Printing</h4>
-                                <ul>
+                                <ul style="list-style-type: none;"  >
                                     <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
                                     </li>
                                     <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
@@ -366,7 +381,7 @@
                             </div>
                         </div>
                         <div>
-                            <ul>
+                            <ul style="list-style-type: none;"  >
                                 <li>
                                     <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
                                 </li>
@@ -387,7 +402,7 @@
                     <div  >
                         <div>
                             <h4>V7 Digital Photo Printing</h4>
-                            <ul>
+                            <ul  style="list-style-type: none;">
                                 <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
                                 </li>
                                 <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
@@ -395,7 +410,7 @@
                         </div>
                     </div>
                     <div>
-                        <ul>
+                        <ul   style="list-style-type: none;">
                             <li>
                                 <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
                             </li>
@@ -428,17 +443,17 @@
                         <div class="pi-price">
                             <h2><span>$</span> "129"</h2>
                         </div>
-                        <ul>
+                        <ul style="list-style-type: none;">
                             <li>One Day Conference Ticket</li>
                             <li>Coffee-break</li>
                             <li>Lunch and Networking</li>
                             <li>Keynote talk</li>
                             <li>Talk to the Edtors Session</li>
                         </ul>
-                        <a href="#" class="price-btn">
+                       <button> <a href="#" class="price-btn">
                             "Get Ticket"
                             <span class="arrow_right"></span>
-                        </a>
+                        </a></button>
                     </div>
                 </div>
                 <div  class="price-con">
@@ -453,7 +468,7 @@
                                 "199"
                             </h2>
                         </div>
-                        <ul>
+                        <ul   style="list-style-type: none;">
                             <li>One Day conference Ticket</li>
                             <li>Coffee-break</li>
                             <li>Lunch and  Networking</li>
@@ -462,9 +477,9 @@
                             <li>Lunch and  Networking</li>
                             <li>Kenynnote  talk  </li>
                         </ul>
-                        <a   href="#" class="price-btn">"Get  Ticket"
+                        <button><a   href="#" class="price-btn">"Get  Ticket"
                             <span  class="arrow_right" ></span> 
-                        </a>
+                        </a></button>
                     </div>
                 </div>
                 <div class="price-con">
@@ -474,7 +489,7 @@
                             "79"
                         </h2>
                     </div>
-                    <ul>
+                    <ul  style="list-style-type: none;">
                         <li>One Day conference Ticket</li>
                         <li>Coffee-break</li>
                         <li>Lunch and  Networking</li>
@@ -482,9 +497,9 @@
                         <li>Talk to the  Editors Session</li>
 
                     </ul>
-                    <a   href="#" class="price-btn">"Get  Ticket"
+                   <button> <a   href="#" class="price-btn">"Get  Ticket"
                         <span  class="arrow_right" ></span> 
-                    </a>
+                    </a></button>
                 </div>
             </div>
          </div>   
@@ -529,9 +544,15 @@
             </div>
 
         </section>
+        <section>
+           <div class="mapouter"><div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas" src="https://maps.google.com/maps?q=california&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:770px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div>">map
+
+            
+        </section>
 
     </main>
     <footer>
+        <img   src="./footer.png" alt="footer" width="100%">
 
     </footer>
     
