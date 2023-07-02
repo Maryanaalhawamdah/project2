@@ -1,13 +1,560 @@
-<div class="first_part"> 
-    <ul  class="ul_top">
-        <li> <img  src="./IMG2.png" alt="img2" width="50px"></li>
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>SPEAKERS</li>
-        <li>SCHEDULE</li>
-        <li>BLOG</li>
-        <li>CONTACTS</li>
-        <li><button>Ticket</button></li>
-    </ul>
-  
- </div>     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/0edb311df1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Pacifico&family=Pathway+Gothic+One&family=Patrick+Hand&family=Work+Sans:wght@100&family=Yellowtail&display=swap" rel="stylesheet">
+    <style>
+        body{
+            /* position: relative; */
+        }
+        .main{
+          
+        }
+        #simg{
+           position:fixed;
+           /* z-index: 1; */
+          
+        }
+        nav{
+            background-color: rgb(83, 80, 80);
+            /* position:relative; */
+            width:80%;
+            height: 100px;
+            text-align:end ;
+            padding: 0px  40px 40px 0px;
+            margin: 0 auto;
+            
+
+        }
+        .under_img{
+            display: flex;
+            background-image: repeating-linear-gradient(orange,pink);
+        }
+        #line_img{
+            width: 50%;
+          padding-left: 100px;
+            background-image: linner-gradient( rgb(224, 116, 48), rgb(223, 78, 121)  );
+        }
+       
+        #demo{
+          
+            font-size:90px;
+            text-align: 0right;
+          
+           
+        }
+        .img_dis{
+            display: flex;
+            margin: 0 auto;
+            padding-top:  70px;
+            width: 70%;
+        }
+        #dis1{
+            padding-left: 40px;
+            font-size: 22px;
+
+        }
+        .team_member_section{
+           
+            margin: 0 auto;
+           
+        }
+        .team_title{
+            text-align: center;
+        }
+        .team_member{
+            display: grid;
+            grid-template-columns:auto auto auto auto  auto;
+            grid-template-rows: auto auto;
+        }
+        .overlay {
+            position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .2s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+        }
+        .container:hover .overlay{
+            opacity: 1;
+        }
+        .container{
+            background-color: white;
+            width: 50%;
+           
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .pricing-section{
+            /* background-image:url(./e843afd5a239e437af13cb867c580c29.jpg)  ; */
+        }
+        .schedule_section{
+            text-align: center;
+           margin-top: 20px;
+           margin-bottom: 20px;
+          
+        }
+        .nav {
+            display: flex;
+            margin-top: 20px;
+          margin-left: 25%;
+          margin-right: 25%;
+          column-gap: 30px;
+          padding: 10px;
+          
+            
+        }
+        .nav_item{
+             border:1px solid black ; 
+            display: flex;
+            flex-direction: column;
+            column-gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .latest-blog{
+            margin-top: 20px;
+           margin-bottom: 20px;
+
+        }
+        .row{
+           display: flex;
+           flex-direction: column;
+        }
+        .pi-price{
+           text-align: center;
+        }
+        .section-title{
+            text-align: center;
+            font-size: xx-large;
+        }
+        .latest-item{
+            margin-top: 20px;
+            height: 700px;
+            background-size: cover;
+            
+
+        }
+        .li-tag{
+            color: white;
+            font-size: xx-large;
+        }
+        .li-text{
+            color: white;
+            align-content: end;
+        }
+        h4{
+            text-align: center;
+        }
+        .price-con{
+            text-align: center;
+        }
+        #counter{
+            border: 1px solid black;
+            font-size: 25px;
+            
+        }
+        #demo{
+           
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 800px) {
+      .left, .main, .right {
+         width: 100%;   }
+          }
+
+      
+
+    </style>
+</head>
+<body>
+    <header>
+        
+
+    </header>
+    <main>
+        <section class="main">
+            <article id="simg" >
+                <img src="./simg.png" alt="simg" width="100%" >
+            </article>
+           
+           
+        </section>
+        <section>
+            <article id="nav_bar">
+                <nav>
+                   <img  src="./IMG2.png"  alt="img2"  height="70px" width="100px">
+                   <a href="/html/" style="color: black;text-decoration: none;margin: 30px;">HOME</a> 
+                   <a href="/css/"  style="color: black; text-decoration: none;margin: 30px;">ABOUT</a> 
+                   <a href="/js/"  style="color: black; text-decoration: none;margin: 30px;">SPEAKERS</a> 
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">SCHEDULE</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">BLOG</a>
+                   <a href="/python/"  style="color: black; text-decoration: none;margin: 30px;">CONTACTS</a>
+                   <button style="margin: 40px;background-color: rgb(227, 92, 115);border-radius: 20px;height: 40px;width: 100px;">Tickets</button>
+                </nav>
+   
+               </article>
+           
+            <article>
+                <img src="./fimg.png" alt="fimg" width=100%>
+            </article>
+        </section>
+        <section class="under_img">
+            <div id="line_img">
+                <p>Conference Date </p>
+                <h1>Count Every Second <br>Until the Event</h1>
+                </div>
+            <div  id="counter">
+                <span id="demo"></span>
+
+                <script>
+                
+                var countDownDate = new Date("jul 20, 2023 15:37:25").getTime();
+                
+               
+                var x = setInterval(function() {
+                
+                 
+                  var now = new Date().getTime();
+                    
+                
+                  var distance = countDownDate - now;
+                    
+                 
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                 
+                  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                    
+                
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                  }
+                }, 1000);
+                </script>
+            </div>
+        </section>
+        <section>
+            <article class="img_dis">
+                <img src="./m0.png" alt="img0" width="50%" >
+                <div id="dis1">
+                    <h2> About Conference </h2>
+                    <p style="color: rgb(141, 139, 139);font-family: 'Work Sans', sans-serif;font-size: 20px;font-weight: 600;line-height: 28px;"> When I first got into the online advertising business, I was looking for the magical combination that would put my website into the top search engine rankings, catapult me to the forefront of the minds or individuals looking to buy my product, and generally make me rich beyond my wildest dreams! After succeeding in the business for this long, I’m able to look back on my old self with this kind of thinking and shake my head.
+                        <ul style="color: rgb(141, 139, 139);font-family: 'Work Sans', sans-serif;font-size: 20px;font-weight: 600;line-height: 28px;">
+                            <li>
+                                Write On Your Business Card
+                            </li>
+                            <li>
+                                Advertising Outdoors
+                            </li>
+                            <li>
+                                Effective Advertising Pointers
+                            </li>
+                            <li>
+                                Kook 2 Directory Add Url Free
+                            </li>
+                        </ul>
+                        <a href="https://preview.colorlib.com/#manup" style="font-size: 20px;color: black;font-weight: 600;">Discover Now</a>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="team_member_section">
+            
+              
+            <div class="team_title">
+                <h3>Who's Speaking</h3>
+                <p>These are our communicators, you can see each person information</p>
+            </div>
+            <div class="team_member">
+                <div class="container">
+                <img  src="./m1.jpg"  alt="member1" width="300px" height="500px" >
+                <div class="overlay"> Emma Sandoval
+                </div>
+               </div>
+           
+                <img src="./m2.jpg" alt="member2" width="300px" height="500px">
+                <img src="./m3.jpg" alt="member3" width="300px" height="500px">
+                <img src="./m4.jpg" alt="member4" width="300px" height="500px">
+                <img src="./m5.jpg" alt="member5" width="300px" height="500px">
+                <img src="./m6.jpg" alt="member6" width="300px" height="500px">
+                <img src="./m7.jpg" alt="member7" width="300px" height="500px">
+                <img src="./m8.jpg" alt="member8" width="300px" height="500px">
+                <img src="./m9.jpg" alt="member9" width="300px" height="500px">
+                <img src="./m10.jpg" alt="member10" width="300px" height="500px">
+
+            </div>
+        </section>
+        <section  class="schedule_section">
+            <h3>Our Schedule</h3>
+            <p>Do not miss anything topic about the event  </p>
+            <ul  class="nav nav_tabs">
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="false"><h5>Day 1</h5><p> May 04 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false"><h5>Day 2</h5><p> May 05 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false"><h5>Day 3</h5><p> May 06 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-4" role="tab" aria-selected="false"><h5>Day 4</h5><p> May 07 , 2019</p></a></li>
+                <li  class="nav_item"><a class="nav_link" data-toggle="tab" href="#tabs-5" role="tab" aria-selected="false"><h5>Day 5</h5><p> May 08 , 2019</p></a></li>
+            </ul>
+            <div class="tab_content">
+                <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                    <div class="st-content">
+                        <div class="container">
+                            <div class="row">
+                                <div >
+                                    <div>
+                                        <img src="./schedule-1.jpg" alt="schedule-img">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h4>Dealig with Difficult People</h4>
+                                        <ul style="list-style-type: none;"  >
+                                            <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                            </li>
+                                            <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="st-content">
+                        <div  class="container">
+                            <div   >
+                                <div >
+                                    <img src="./schedule-2.jpg" alt="schedule-2">
+                                </div>
+                            </div>
+                            <div  >
+                                <div>
+                                    <h4>V7 Digital Photo Printing</h4>
+                                    <ul  style="list-style-type: none;">
+                                        <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                        </li>
+                                        <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <ul  style="list-style-type: none;">
+                                    <li>
+                                        <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
+                                    </li>
+                                    <li>
+                                        <i class="fa-sharp fa-solid fa-location-dot" style="color: #dd0e0e;"></i>  "59  Breanne Canyon Suite  , USA "
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   <div  class="st-content">
+                       <div  class="container">
+                        <div   >
+                            <div >
+                                <img src="./schedule-3.jpg.webp" alt="schedule-3">
+                            </div>
+                        </div>
+                        <div  >
+                            <div>
+                                <h4>V7 Digital Photo Printing</h4>
+                                <ul style="list-style-type: none;"  >
+                                    <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                    </li>
+                                    <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none;"  >
+                                <li>
+                                    <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
+                                </li>
+                                <li>
+                                    <i class="fa-sharp fa-solid fa-location-dot" style="color: #dd0e0e;"></i>  "59  Breanne Canyon Suite  , USA "
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                   </div>           
+                   <div  class="st-content">
+                    <div  class="container">
+                    <div   >
+                        <div >
+                            <img src="./schedule-4.jpg.webp" alt="schedule-4">
+                        </div>
+                    </div>
+                    <div  >
+                        <div>
+                            <h4>V7 Digital Photo Printing</h4>
+                            <ul  style="list-style-type: none;">
+                                <li><i class="fa-solid fa-user" style="color: #e7081f;"> </i>"John Smith "
+                                </li>
+                                <li><i class="fa-solid fa-envelope" style="color: #ec0914;"></i>"john@colorlib.com"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <ul   style="list-style-type: none;">
+                            <li>
+                                <i class="fa-sharp fa-regular fa-clock" style="color: #d40812;"></i>"08:00 am  - 10:00   Am"
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-location-dot" style="color: #dd0e0e;"></i>  "59  Breanne Canyon Suite  , USA "
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                   </div>
+                </div>
+            </div>
+
+       
+        </section>
+        <section class="pricing-section" style="background-image:url(./e843afd5a239e437af13cb867c580c29.jpg) ;">
+         <div class="container">
+            <div class="row">
+                <div >
+                    <div class="section-title">
+                        <h2>Ticket Pricing</h2>
+                        <p>Get your event ticket plan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div> 
+                    <div class="price-con">
+                        <h4> 1 Day Pass </h4>
+                        <div class="pi-price">
+                            <h2><span>$</span> "129"</h2>
+                        </div>
+                        <ul style="list-style-type: none;">
+                            <li>One Day Conference Ticket</li>
+                            <li>Coffee-break</li>
+                            <li>Lunch and Networking</li>
+                            <li>Keynote talk</li>
+                            <li>Talk to the Edtors Session</li>
+                        </ul>
+                       <button> <a href="#" class="price-btn">
+                            "Get Ticket"
+                            <span class="arrow_right"></span>
+                        </a></button>
+                    </div>
+                </div>
+                <div  class="price-con">
+                    <div class="price-item top-rated">
+                        <div class="tr-tag">
+                            <i class="fa-sharp fa-solid fa-square-star" style="color: #d53f55;"></i>
+                        </div>
+                        <h4>FullPass</h4>
+                        <div class="pi-price">
+                            <h2>
+                                <span>$</span>
+                                "199"
+                            </h2>
+                        </div>
+                        <ul   style="list-style-type: none;">
+                            <li>One Day conference Ticket</li>
+                            <li>Coffee-break</li>
+                            <li>Lunch and  Networking</li>
+                            <li>Kenynnote  talk  </li>
+                            <li>Talk to the  Editors Session</li>
+                            <li>Lunch and  Networking</li>
+                            <li>Kenynnote  talk  </li>
+                        </ul>
+                        <button><a   href="#" class="price-btn">"Get  Ticket"
+                            <span  class="arrow_right" ></span> 
+                        </a></button>
+                    </div>
+                </div>
+                <div class="price-con">
+                    <div class="pi-price">
+                        <h2>
+                            <span>$</span>
+                            "79"
+                        </h2>
+                    </div>
+                    <ul  style="list-style-type: none;">
+                        <li>One Day conference Ticket</li>
+                        <li>Coffee-break</li>
+                        <li>Lunch and  Networking</li>
+                        <li>Kenynnote  talk  </li>
+                        <li>Talk to the  Editors Session</li>
+
+                    </ul>
+                   <button> <a   href="#" class="price-btn">"Get  Ticket"
+                        <span  class="arrow_right" ></span> 
+                    </a></button>
+                </div>
+            </div>
+         </div>   
+        
+        </section>
+        <section class="latest-blog">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <div  class="section-title">
+                            <h2>Latest News</h2>
+                            <p>Do not miss anything topic abput the event</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div  class="latest-item" style="background-image:url(./m8.jpg) ;">
+                            <div class="li-tag">Marketing</div>
+                            <div class="li-text">
+                                <h4>
+                                    <a href="./m8.jpg">Improve You Business Cards And Enchan Your Sales</a>
+                                </h4>
+                                <span>
+                                    <i class="fa-regular fa-clock" style="color: #d42916;"></i>"19th May,2019"
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <div  class="latest-item" style="background-image:url(./sunset-in-heart-hands-HD-picture-02.jpg) ;">
+                        <div class="li-tag">Experience</div>
+                        <div class="li-text">
+                            <h5>
+                                <a href="./sunset-in-heart-hands-HD-picture-02.jpg" style="">All users on Mysace will know that there are millions of people out there.</a>
+                            </h5>
+                            <span><i class="fa-regular fa-clock" style="color: #d42916;"></i>"19th May,2019"</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section>
+           <div class="mapouter"><div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas" src="https://maps.google.com/maps?q=california&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:770px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div>">map
+
+            
+        </section>
+
+    </main>
+    <footer>
+        <img   src="./footer.png" alt="footer" width="100%">
+
+    </footer>
+    
+</body>
+</html>
